@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Details</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles2.css" />
+
+    <script defer src="event-details.js"></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="event-details-container">
+        <h1 id="event-title" class="event-title"></h1>
+        <div class="event-meta">
+          <div>
+            <p id="event-date" class="event-date"></p>
+            <p id="event-cost" class="event-cost"></p>
+          </div>
+          <div class="event-photo-container">
+            <img
+              id="event-photo"
+              class="event-photo"
+              onclick="openPhotoModal()"
+              alt="Event Photo"
+            />
+          </div>
+        </div>
+
+        <h2 class="event-section-title">Description</h2>
+        <div id="event-description" class="event-description"></div>
+
+        <h2 class="event-section-title">Prerequisites</h2>
+        <div id="event-prerequisites" class="event-prerequisites"></div>
+
+        <h2 class="event-section-title">Details</h2>
+        <div id="event-details" class="event-details"></div>
+
+        <h2 class="event-section-title">Instructor</h2>
+        <p id="event-instructor"></p>
+
+        <h2 class="event-section-title">Provider</h2>
+        <p id="event-provider"></p>
+
+        <h2 class="event-section-title">Outcomes</h2>
+        <ul id="event-outcomes" class="list-group"></ul>
+
+        <!-- Center the register button -->
+        <div class="form-container">
+          <form action="https://tinyurl.com/hadath003" method="get">
+            <button type="submit" class="btn btn-primary btn-lg">
+              Register
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="photo-modal" class="photo-modal">
+      <span class="close-modal" onclick="closePhotoModal()">&times;</span>
+      <img
+        id="modal-image"
+        class="modal-content"
+        src=""
+        alt="Full Size Event Photo"
+      />
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organization Registration</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f6f6f6;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .main-container {
+        padding: 20px;
+      }
+
+      .page-header {
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        color: #6a11cb;
+        font-size: 36px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .form-control {
+        border-radius: 10px;
+        border: 2px solid #6a11cb;
+      }
+
+      .form-group label {
+        color: #34495e;
+        font-weight: bold;
+      }
+
+      .form-check-label {
+        color: #34495e;
+      }
+
+      .btn-primary {
+        background-color: #2575fc;
+        border-color: #2575fc;
+        border-radius: 8px;
+      }
+
+      .btn-primary:hover {
+        background-color: #6a11cb;
+        border-color: #6a11cb;
+      }
+
+      select.form-control {
+        height: auto;
+      }
+
+      .container-fluid {
+        max-width: 900px;
+      }
+
+      #main-content-section {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-check-input:checked {
+        background-color: #2575fc;
+        border-color: #2575fc;
+      }
+
+      .text-danger {
+        color: #6a11cb !important;
+      }
+
+      footer {
+        margin-top: 30px;
+        text-align: center;
+        color: #7f8c8d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-container container-fluid">
+      <header role="banner" id="page-header"></header>
+
+      <div class="row">
+        <!-- Main Content -->
+        <section class="col-md-9 mx-auto" id="main-content-section">
+          <h1 class="page-header">Register Your Organization</h1>
+          <form id="registration-form" action="registerDetails.html">
+            <div class="form-group">
+              <label for="organization-name"
+                >Organization Name <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="organization-name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="scope"
+                >Scope <span class="text-danger">*</span></label
+              >
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="scope"
+                  id="scope-national"
+                  value="national"
+                  required
+                />
+                <label class="form-check-label" for="scope-national"
+                  >National</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="scope"
+                  id="scope-regional"
+                  value="regional"
+                />
+                <label class="form-check-label" for="scope-regional"
+                  >Regional</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="scope"
+                  id="scope-international"
+                  value="international"
+                />
+                <label class="form-check-label" for="scope-international"
+                  >International</label
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="active-countries"
+                >Countries of Operation
+                <span class="text-danger">*</span></label
+              >
+              <select
+                class="form-control"
+                id="active-countries"
+                multiple
+                required
+              >
+                <option value="Lebanon">Lebanon</option>
+                <option value="Syria">Syria</option>
+                <option value="Jordan">Jordan</option>
+                <option value="Egypt">Egypt</option>
+                <!-- Add more countries as needed -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="email"
+                >Email Address <span class="text-danger">*</span></label
+              >
+              <input type="email" class="form-control" id="email" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Organization Registration Platform</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
